@@ -24,6 +24,6 @@ export const StyledDescriptionContent = styled.div`
   }
 
   p {
-    font-weight: 300;
+    font-weight: 200;
   }
 `;

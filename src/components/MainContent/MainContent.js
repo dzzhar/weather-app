@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledMainContent = styled.div`
   color: #fff;
-  margin-block: 5rem;
+  margin-block: 25%;
   text-align: center;
 
   .main__desc {

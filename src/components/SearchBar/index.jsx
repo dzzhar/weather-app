@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "boxicons";
 import { StyledSearchBar } from "./SearchBar.sytled";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { URL } from "../../../utils/constant/endpoints";
 import WeatherContext from "../../context/WeatherContext";
 
@@ -11,6 +11,14 @@ export const SearchBar = () => {
   const { setWeatherData } = useContext(WeatherContext);
 
   const search = async (city) => {
+    if (city === "") {
+      alert("Please enter city name");
+      return;
+    } else if (!city) {
+      alert("Wrong city");
+      return;
+    }
+
     try {
       const response = await fetch(`${URL(city)}`);
       if (!response.ok) {

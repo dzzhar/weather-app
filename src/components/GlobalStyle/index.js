@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import bgImage from "../../assets/bg.png";
 
 export const GlobalStyle = createGlobalStyle`
 *,
@@ -8,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -21,21 +22,19 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: #020207;
+  background-image: url(${bgImage});
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 img,
-picture,
-video,
-canvas,
 svg {
   display: block;
   max-width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
+input {
   font: inherit;
 }
 
@@ -49,24 +48,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.7rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
+  @media(min-width: 426px){
+    html{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    }
+  }
 `;
